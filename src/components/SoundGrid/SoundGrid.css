@@ -1,0 +1,48 @@
+.sound-grid-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.sound-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.category-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .sound-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .sound-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sound-grid-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sound-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .sound-grid-container {
+    padding: 1rem;
+  }
+}
